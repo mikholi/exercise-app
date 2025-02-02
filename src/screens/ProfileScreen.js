@@ -1,8 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import styles from '../styles/ProfileScreenStyles';
 
 export default function ProfileScreen () {
     return(
-        <Text style>This is the Profile screen</Text>
-    )
+            <View style={styles.container}>
+                <Text style={styles.text}>This is the Profile screen</Text>
+            </View>
+        )
 }
