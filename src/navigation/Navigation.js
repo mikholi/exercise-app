@@ -2,6 +2,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { View } from "react-native";
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import HomeScreen from "../screens/HomeScreen";
+import ExercisesScreen from "../screens/ExerciseScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 
 
 
@@ -42,6 +45,5 @@ export default function BottomNav() {
     );
 }
 
-const HomeScreen = () => <View style={{backgroundColor: 'yellow', flex:1}}/>;
-const ProfileScreen = () => <View style={{backgroundColor: 'blue', flex: 1}}/>
-const ExercisesScreen = () => <View style={{backgroundColor: 'red', flex: 1}}/>
+
+
