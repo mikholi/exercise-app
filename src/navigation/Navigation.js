@@ -17,8 +17,8 @@ const EXERCISES = 'Exercises'
 
 const icons = {
     [HOME]: 'home',
-    [PROFILE]: 'message1',
-    [EXERCISES]: 'setting'
+    [PROFILE]: 'user',
+    [EXERCISES]: 'calendar'
 }
 
 export default function BottomNav() {

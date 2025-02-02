@@ -6,7 +6,7 @@ export default StyleSheet.create({
         backgroundColor: 'grey',
         textAlign: 'center',
         alignItems: 'center',
-        padding: 30,
+        
         
     },
     text: {
@@ -14,9 +14,10 @@ export default StyleSheet.create({
         fontWeight: 'bold',
     },
     logo: {
-        width: '100%',
-        height: '70%',
-        flex: 2,
+        flex: 0.5,
+        borderWidth: 5,
+
+        
         
     }
 })

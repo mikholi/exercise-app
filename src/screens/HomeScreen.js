@@ -7,7 +7,7 @@ export default function HomeScreen () {
     return(
         <View style={styles.container}>
             <Image source={logo} style={styles.logo} resizeMode="contain" />
-            <Text style={styles.text}>This is the home screen</Text>
+            <Text style={styles.text}>EXERCISE TRACKER</Text>
             
         </View>
     )
