@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import styles from '../styles/HomeScreenStyles';
-import logo from '../../assets/logo.png';
+import logo from '../../assets/logo2.png';
 
 export default function HomeScreen () {
     return(

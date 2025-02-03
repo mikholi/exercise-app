@@ -9,16 +9,19 @@ import ProfileScreen from "../screens/ProfileScreen";
 
 
 
+
 const Tab = createBottomTabNavigator();
 
 const HOME = 'Home';
 const PROFILE = 'Profile'
 const EXERCISES = 'Exercises'
 
+
 const icons = {
     [HOME]: 'home',
     [PROFILE]: 'user',
-    [EXERCISES]: 'calendar'
+    [EXERCISES]: 'calendar',
+    
 }
 
 export default function BottomNav() {
@@ -40,6 +43,7 @@ export default function BottomNav() {
                     component={ExercisesScreen}
                     options={{tabBarIcon: () => <AntDesign name={icons[EXERCISES]}size={20}/>}}
                 />
+                
             </Tab.Navigator>
         </NavigationContainer>
     );
