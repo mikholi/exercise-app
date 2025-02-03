@@ -17,17 +17,25 @@ const PROFILE = 'Profile'
 const EXERCISES = 'Exercises'
 
 
+
 const icons = {
     [HOME]: 'home',
     [PROFILE]: 'user',
     [EXERCISES]: 'calendar',
-    
 }
 
 export default function BottomNav() {
     return (
         <NavigationContainer>
-            <Tab.Navigator>
+            <Tab.Navigator
+            screenOptions={{
+                tabBarActiveBackgroundColor:'#E4FEF5',
+                animation: 'fade' ,
+                    
+            }}
+            
+            
+            >
                 <Tab.Screen
                     name={HOME}
                     component={HomeScreen}
@@ -43,7 +51,6 @@ export default function BottomNav() {
                     component={ExercisesScreen}
                     options={{tabBarIcon: () => <AntDesign name={icons[EXERCISES]}size={20}/>}}
                 />
-                
             </Tab.Navigator>
         </NavigationContainer>
     );
