@@ -29,12 +29,9 @@ export default function BottomNav() {
         <NavigationContainer>
             <Tab.Navigator
             screenOptions={{
-                tabBarActiveBackgroundColor:'#E4FEF5',
-                animation: 'fade' ,
-                    
+                
+                animation: 'fade' ,           
             }}
-            
-            
             >
                 <Tab.Screen
                     name={HOME}
