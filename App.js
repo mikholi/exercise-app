@@ -1,17 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Navigation from './src/navigation/Navigation.js'
+import React from 'react';
+import { Text } from 'react-native';
+import { useFonts } from 'expo-font';
+import Navigation from './src/navigation/Navigation';
+
 export default function App() {
-  return <Navigation />
+  const [loaded] = useFonts({
+    RobotoMedium: require('./src/fonts/Roboto-Medium.ttf'),
+  });
 
+  if (!loaded) {
+    return <Text>Loading...</Text>;
+  }
 
+  return <Navigation />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

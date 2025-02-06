@@ -5,12 +5,13 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import HomeScreen from "../screens/HomeScreen";
 import ExercisesScreen from "../screens/ExerciseScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-
-
+import InputNewExercise from "../screens/InputNewExercise";
+import { createStackNavigator } from "@react-navigation/stack";
 
 
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 const HOME = 'Home';
 const PROFILE = 'Profile'
@@ -24,19 +25,32 @@ const icons = {
     [EXERCISES]: 'calendar',
 }
 
+function HomeStackNavigator() {
+    return (
+        <Stack.Navigator
+            screenOptions={{
+                headerShown: false,
+                animation: 'fade'
+            }}>
+            <Stack.Screen name="HomeMain" component={HomeScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="InputNewExercise" component={InputNewExercise} />
+        </Stack.Navigator>
+    );
+}
+
 export default function BottomNav() {
     return (
         <NavigationContainer>
             <Tab.Navigator
             screenOptions={{
-                
+                headerShown: false,
                 animation: 'fade' ,           
             }}
             >
                 <Tab.Screen
                     name={HOME}
-                    component={HomeScreen}
-                    options={{tabBarIcon: ()=> <AntDesign name={icons[HOME]}size={20}/>}}
+                    component={HomeStackNavigator} 
+                    options={{ tabBarIcon: () => <AntDesign name={icons[HOME]} size={20} /> }}
                 />
                 <Tab.Screen
                     name={PROFILE}

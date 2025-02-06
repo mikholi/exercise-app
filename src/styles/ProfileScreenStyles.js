@@ -12,5 +12,6 @@ export default StyleSheet.create({
     text: {
         fontSize: 30,
         fontWeight: 'bold',
+        fontFamily: 'RobotoMedium',
     }
 })

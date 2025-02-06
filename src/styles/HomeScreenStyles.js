@@ -38,12 +38,14 @@ export default StyleSheet.create({
         paddingHorizontal: 40,
         borderRadius: 10,
         alignItems: 'center',
+        
     },
     
     inputButtonText: {
         color: 'white',
         fontSize: 20,
         fontWeight: 'bold',
+        fontFamily: 'RobotoMedium'
     },
     
 
