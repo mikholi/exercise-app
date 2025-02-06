@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Button } from 'react-native-paper';
+import { Button,  } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
 
 const NewExercise = () => {
     const navigation = useNavigation();
@@ -10,14 +11,29 @@ const NewExercise = () => {
         icon="plus"
         mode='contained'
         onPress={() => {
-            console.log("Navigating to InputNewExercise...");
-            navigation.push("InputNewExercise");
-        }}
+            console.log('Navigating to InputNewExercise...');
+            navigation.navigate('InputNewExercise');
+          }}
+          style={styles.button}
+          labelStyle={styles.label} // Styling the text inside the button
+          contentStyle={styles.content}
         >
-            New Exercise
+          NEW EXERCISE
         </Button>
     )
-}
+};
+
+
+const styles = StyleSheet.create({
+    button: {
+        backgroundColor: '#21B4DE',
+        width: 200,
+        padding: 10,
+    },
+    label: {
+        fontStyle: 'bold',
+    }
+});
     
 
 export default NewExercise;

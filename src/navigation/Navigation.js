@@ -44,8 +44,7 @@ export default function BottomNav() {
         <NavigationContainer>
             <Tab.Navigator
             screenOptions={{
-                
-                animation: 'fade' ,           
+                animation: 'fade',           
             }}
             >
                 <Tab.Screen
