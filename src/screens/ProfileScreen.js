@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import styles from '../styles/ProfileScreenStyles';
-import { useFonts } from "expo-font";
+
 
 export default function ProfileScreen () {
     return(
