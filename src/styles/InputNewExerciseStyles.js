@@ -1,3 +1,4 @@
+import { icons } from "antd/es/image/PreviewGroup";
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
@@ -11,6 +12,8 @@ export default StyleSheet.create({
 
       header: {
         fontFamily: 'RobotoMedium',
-      }
+      },
+
+      
 
     })
