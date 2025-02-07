@@ -6,7 +6,7 @@ import styles from '../styles/ProfileScreenStyles';
 export default function ProfileScreen () {
     return(
             <View style={styles.container}>
-                <Text style={styles.header}>This is the Profile screen</Text>
+                <Text style={styles.header}>Input a new exercise</Text>
             </View>
         )
 }
