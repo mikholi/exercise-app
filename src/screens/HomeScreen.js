@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
-import styles from '../styles/HomeScreenStyles'; // Ensure this file contains the necessary styles
+import styles from '../styles/HomeScreenStyles'; 
 import { useNavigation } from "@react-navigation/native";
-import ExerciseButton from "../components/ExerciseButton"; // Renamed for clarity
+import ExerciseButton from "../components/ExerciseButton"; 
 
 export default function HomeScreen () {
 
@@ -14,9 +14,8 @@ export default function HomeScreen () {
             <Text style={styles.heading}>EXERCISE TRACKER</Text>
             <View style={styles.inputButtonContainer}>
             <ExerciseButton 
-                title="SAVE NEW EXERCISE"
+                title="NEW EXERCISE"
                 onPress={() => {
-                    console.log("Navigating to InputNewExercise...");
                     navigation.push("InputNewExercise");
         }}
             />

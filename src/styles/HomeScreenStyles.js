@@ -24,29 +24,9 @@ export default StyleSheet.create({
         aspectRatio: 1, 
       },
 
-      inputButtonContainer: {
-        position: 'absolute',
-        bottom: 60,
-        left: 20,
-        right: 20,
-        alignItems: 'center',
-    },
+      
     
-    inputButton: {
-        backgroundColor: '#668BF2',
-        paddingVertical: 15,
-        paddingHorizontal: 40,
-        borderRadius: 10,
-        alignItems: 'center',
-        
-    },
     
-    inputButtonText: {
-        color: 'white',
-        fontSize: 20,
-        fontWeight: 'bold',
-        fontFamily: 'RobotoMedium'
-    },
     
 
       

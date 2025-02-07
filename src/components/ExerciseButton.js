@@ -3,36 +3,32 @@ import { Button,  } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet } from 'react-native';
 
-const NewExercise = () => {
-    const navigation = useNavigation();
 
-    return (
-        <Button
-        icon="plus"
-        mode='contained'
-        onPress={() => {
-            console.log('Navigating to InputNewExercise...');
-            navigation.navigate('InputNewExercise');
-          }}
-          style={styles.button}
-          labelStyle={styles.label} // Styling the text inside the button
-          contentStyle={styles.content}
-        >
-          NEW EXERCISE
-        </Button>
-    )
-};
+const NewExercise = ({ onPress, title }) => (
+    <Button
+      icon="plus"
+      mode="contained"
+      onPress={onPress}
+      contentStyle={styles.buttonContent}
+      labelStyle={styles.label}
+    >
+      {title}
+    </Button>
+  );
 
 
 const styles = StyleSheet.create({
-    button: {
+    buttonContent: {
         backgroundColor: '#21B4DE',
-        width: 200,
+        width: 250,
         padding: 10,
     },
     label: {
-        fontStyle: 'bold',
-    }
+        
+        fontSize: 20,
+        fontFamily: 'RobotoMedium',
+    },
+    
 });
     
 
