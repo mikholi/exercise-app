@@ -6,6 +6,8 @@ import running from '../../assets/running.png';
 import swimming from '../../assets/swimming.png';
 import bicycle from '../../assets/bicycle.png';
 import { useNavigation } from "@react-navigation/native";
+import CalendarModal from "../components/CalendarModal";
+
 
 export default function InputNewExercise () {
     const navigation = useNavigation();
@@ -19,6 +21,9 @@ export default function InputNewExercise () {
     return(
         <View style={styles.container}>
         <Text style={styles.header}>Choose one sport to store new exercise.</Text>
+        <CalendarModal />
+        
+
     </View>
     
     )
