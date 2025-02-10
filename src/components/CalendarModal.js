@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.5)", // Add a semi-transparent background
+        backgroundColor: "rgba(0, 0, 0, 0.5)", 
     },
     modalView: {
         margin: 20,
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 4,
         elevation: 5,
-        width: '90%', // Adjust width to fit the screen better
+        width: '90%', 
     }
 });
 

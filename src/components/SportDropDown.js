@@ -1,34 +1,36 @@
-import React, { useState } from "react";
-import { View } from "react-native";
-import { Provider as PaperProvider } from "react-native-paper";
-import DropDown from "react-native-paper-dropdown"; // Ensure correct import
+import React, { useState } from 'react';
+import { View, StyleSheet} from 'react-native';
+import { Dropdown } from 'react-native-paper-dropdown';
+import { Provider as PaperProvider } from 'react-native-paper';
 
 const OPTIONS = [
-    { label: 'Swimming', value: 'swimming' },
-    { label: 'Running', value: 'running' },
-    { label: 'Cycling', value: 'cycling' },
+  { label: 'Swimming', value: 'swimming' },
+  { label: 'Running', value: 'running' },
+  { label: 'Cycling', value: 'cycling' },
 ];
 
-const SportDropDown = () => {
-    const [exercise, setExercise] = useState("");
-    const [showDropDown, setShowDropDown] = useState(false);
+export default function App() {
+  const [gender, setGender] = useState();
 
-    return (
-        <PaperProvider>
-            <View style={{ margin: 16 }}>
-                <DropDown
-                    label="Select a sport"
-                    mode="outlined"
-                    visible={showDropDown}
-                    showDropDown={() => setShowDropDown(true)}
-                    onDismiss={() => setShowDropDown(false)}
-                    value={exercise}
-                    setValue={setExercise}
-                    list={OPTIONS}  // ✅ Ensure this is not undefined
-                />
-            </View>
-        </PaperProvider>
-    );
-};
+  return (
+    <PaperProvider>
+      <View style={styles.container}>
+        <Dropdown
+          label="Sport"
+          placeholder="Select Sport"
+          options={OPTIONS}
+          value={gender}
+          onSelect={setGender}
+        />
+      </View>
+    </PaperProvider>
+  );
+}
 
-export default SportDropDown;
+const styles = StyleSheet.create({
+    container: {
+        justifyContent: 'center',
+        padding: 10,
+        
+    },
+    });

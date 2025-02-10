@@ -3,7 +3,7 @@ import { View, Text, Button } from "react-native";
 import styles from '../styles/InputNewExerciseStyles';
 import { useNavigation } from "@react-navigation/native";
 import CalendarModal from "../components/CalendarModal";
-
+import SportDropDown from "../components/SportDropDown";
 
 export default function InputNewExercise() {
     const navigation = useNavigation();
@@ -24,6 +24,7 @@ export default function InputNewExercise() {
                 visible={modalVisible} 
                 onClose={() => setModalVisible(false)} 
             />
+            <SportDropDown/>
             
         </View>
     );

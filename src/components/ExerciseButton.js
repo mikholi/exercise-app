@@ -15,7 +15,7 @@ const NewExercise = () => {
             navigation.navigate('InputNewExercise');
           }}
           style={styles.button}
-          labelStyle={styles.label} // Styling the text inside the button
+          labelStyle={styles.label} 
           contentStyle={styles.content}
         >
           NEW EXERCISE
