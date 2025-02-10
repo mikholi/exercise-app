@@ -14,15 +14,15 @@ const CalendarModal = ({ visible, onClose }) => {
         >
             <View style={styles.centeredView}>
                 <View style={styles.modalView}>
-                <Calendar 
-                    onDayPress={day => {
-                        setSelected(day.dateString);
-                    }}
-                    markedDates={{
-                        [selected]: { selected: true, disableTouchEvent: true }
-                    }}
-                />
-                <Button title="Close" onPress={onClose} />
+                    <Calendar 
+                        onDayPress={day => {
+                            setSelected(day.dateString);
+                        }}
+                        markedDates={{
+                            [selected]: { selected: true, disableTouchEvent: true }
+                        }}
+                    />
+                    <Button title="Close" onPress={onClose} />
                 </View>
             </View>
         </Modal>
@@ -30,12 +30,11 @@ const CalendarModal = ({ visible, onClose }) => {
 }
 
 const styles = StyleSheet.create({
-
     centeredView: {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        marginTop: 22
+        backgroundColor: "rgba(0, 0, 0, 0.5)", // Add a semi-transparent background
     },
     modalView: {
         margin: 20,
@@ -50,7 +49,8 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 4,
-        elevation: 5
+        elevation: 5,
+        width: '90%', // Adjust width to fit the screen better
     }
 });
 

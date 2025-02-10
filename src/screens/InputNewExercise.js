@@ -4,6 +4,7 @@ import styles from '../styles/InputNewExerciseStyles';
 import { useNavigation } from "@react-navigation/native";
 import CalendarModal from "../components/CalendarModal";
 
+
 export default function InputNewExercise() {
     const navigation = useNavigation();
     const [modalVisible, setModalVisible] = useState(false);
@@ -23,6 +24,7 @@ export default function InputNewExercise() {
                 visible={modalVisible} 
                 onClose={() => setModalVisible(false)} 
             />
+            
         </View>
     );
 }
