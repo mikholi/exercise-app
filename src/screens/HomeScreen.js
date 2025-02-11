@@ -4,8 +4,8 @@ import styles from '../styles/HomeScreenStyles';
 import { useNavigation } from "@react-navigation/native";
 import CustomButton from "../components/Button";
 
-
 export default function HomeScreen () {
+    
 
     const navigation = useNavigation();
 
@@ -16,7 +16,8 @@ export default function HomeScreen () {
             <View style={styles.inputButtonContainer}>
             <CustomButton
                 title="NEW EXERCISE"   
-                onPress={() => navigation.navigate("InputNewExercise")} 
+                onPress={() => navigation.navigate("InputNewExercise")}
+                
             />
 
             </View>

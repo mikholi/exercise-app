@@ -22,14 +22,13 @@ export default function InputNewExercise() {
         <View style={styles.container}>
             <Text style={styles.header}>Press button to store new exercise</Text>
             <CustomButton 
-                title="Select Date" 
+                title="ADD NEW" 
                 onPress={() => setModalVisible(true)} 
             />
             <CalendarModal 
                 visible={modalVisible} 
                 onClose={() => setModalVisible(false)} 
             />
-            <Text>Here comes the most recent exercises</Text>
         </View>
     );
 }
