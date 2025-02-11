@@ -3,6 +3,7 @@ import { View, StyleSheet} from 'react-native';
 import { Dropdown } from 'react-native-paper-dropdown';
 import { Provider as PaperProvider } from 'react-native-paper';
 
+
 const OPTIONS = [
   { label: 'Swimming', value: 'swimming' },
   { label: 'Running', value: 'running' },
@@ -14,7 +15,7 @@ export default function App() {
 
   return (
     <PaperProvider>
-      <View style={styles.container}>
+      <View style={styles.dropdown}>
         <Dropdown
           label="Sport"
           placeholder="Select Sport"
@@ -28,9 +29,10 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-    container: {
+    dropdown: {
         justifyContent: 'center',
         padding: 10,
+        flex: 0.4,
         
     },
     });
