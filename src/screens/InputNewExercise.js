@@ -3,7 +3,6 @@ import { View, Text, Button } from "react-native";
 import styles from '../styles/InputNewExerciseStyles';
 import { useNavigation } from "@react-navigation/native";
 import CalendarModal from "../components/CalendarModal";
-import SportDropDown from "../components/SportDropDown";
 import CustomButton from "../components/Button";
 export default function InputNewExercise() {
     const navigation = useNavigation();
@@ -18,7 +17,7 @@ export default function InputNewExercise() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.header}>Choose one sport to store new exercise.</Text>
+            <Text style={styles.header}>Press button to store new exercise</Text>
             <CustomButton 
                 title="Select Date" 
                 onPress={() => setModalVisible(true)} 
@@ -27,7 +26,7 @@ export default function InputNewExercise() {
                 visible={modalVisible} 
                 onClose={() => setModalVisible(false)} 
             />
-            <SportDropDown />
+            <Text>Here comes the most recent exercises</Text>
         </View>
     );
 }
