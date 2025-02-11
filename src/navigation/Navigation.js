@@ -33,8 +33,7 @@ function HomeStackNavigator() {
                 animation: 'fade'
             }}>
             <Stack.Screen name="HomeMain" component={HomeScreen} options={{ headerShown: false }} />
-            <Stack.Screen name="InputNewExercise"
-            component={InputNewExercise} />
+            <Stack.Screen name="InputNewExercise" component={InputNewExercise} />
         </Stack.Navigator>
     );
 }

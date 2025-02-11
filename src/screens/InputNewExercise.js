@@ -4,6 +4,9 @@ import styles from '../styles/InputNewExerciseStyles';
 import { useNavigation } from "@react-navigation/native";
 import CalendarModal from "../components/CalendarModal";
 import CustomButton from "../components/Button";
+
+
+
 export default function InputNewExercise() {
     const navigation = useNavigation();
     const [modalVisible, setModalVisible] = useState(false);
