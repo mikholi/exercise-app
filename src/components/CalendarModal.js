@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Modal, View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import { Calendar } from "react-native-calendars";
 import { useNavigation } from "@react-navigation/native";
@@ -6,6 +6,8 @@ import InputSpinner from "react-native-input-spinner";
 import bicycle from "../../assets/bicycle.png";
 import running from "../../assets/running.png";
 import swimming from "../../assets/swimming.png";
+import { ExerciseContext } from "./ExerciseContext";
+
 
 const CalendarModal = ({ visible, onClose }) => {
     const [selected, setSelected] = useState(""); 
@@ -16,6 +18,7 @@ const CalendarModal = ({ visible, onClose }) => {
     const [distance, setDistance] = useState(0); 
     const [time, setTime] = useState(0); 
     const navigation = useNavigation(); 
+    const { addExercise } = useContext(ExerciseContext);
 
     const handleDayPress = (day) => {
         setSelected(day.dateString);

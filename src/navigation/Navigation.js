@@ -7,7 +7,7 @@ import ExercisesScreen from "../screens/ExerciseScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import InputNewExercise from "../screens/InputNewExercise";
 import { createStackNavigator } from "@react-navigation/stack";
-
+import { ExerciseProvider } from "../components/ExerciseContext";
 
 
 const Tab = createBottomTabNavigator();
@@ -34,12 +34,14 @@ function HomeStackNavigator() {
             }}>
             <Stack.Screen name="HomeMain" component={HomeScreen} options={{ headerShown: false }} />
             <Stack.Screen name="InputNewExercise" component={InputNewExercise} />
+            <Stack.Screen name= 'ExerciseScreen' component={ExercisesScreen} />
         </Stack.Navigator>
     );
 }
 
 export default function BottomNav() {
     return (
+        <ExerciseProvider>
         <NavigationContainer>
             <Tab.Navigator
             screenOptions={{
@@ -63,6 +65,7 @@ export default function BottomNav() {
                 />
             </Tab.Navigator>
         </NavigationContainer>
+        </ExerciseProvider>
     );
 }
 
