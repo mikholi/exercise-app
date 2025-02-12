@@ -67,4 +67,5 @@ export default function BottomNav() {
 }
 
 
-
+// Seuraavaksi calendarmodaliin lisätään valikko mihin voi syöttää kilometrimäärät. Yksinkertainen 
+//valikko mistä kun painaa voidaan näppäimillä laittaa määrä
