@@ -36,6 +36,7 @@ const CalendarModal = ({ visible, onClose }) => {
     };
 
     const handleSave = () => {
+        addExercise({ date: selected, sport, distance, time});
         navigation.navigate("ExerciseScreen", { selectedDate: selected, sport, distance, time });
         onClose(); 
     };

@@ -1,9 +1,9 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import { View, Text, StyleSheet, FlatList} from 'react-native';
 import { ExerciseContext } from '../components/ExerciseContext';
 
 const ExerciseScreen = () => {
-    const { exercises} = useContext(ExerciseContext);
+    const { exercises } = useContext(ExerciseContext);
 
     return (
         <View style={styles.container}>
@@ -36,10 +36,11 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     item: {
-        backgroundColor: '#f9c2ff',
+        backgroundColor: '#21B4DE',
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
+        borderRadius: 10,
     },
 });
 
