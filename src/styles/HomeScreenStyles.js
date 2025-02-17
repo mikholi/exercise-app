@@ -11,7 +11,7 @@ export default StyleSheet.create({
 
     heading: {
       padding: 20,
-      fontFamily: 'RobotoMedium',
+      fontFamily: 'PoppinsMedium',
       fontSize: 35,
     },
     text: {
@@ -45,7 +45,7 @@ export default StyleSheet.create({
         color: 'white',
         fontSize: 20,
         fontWeight: 'bold',
-        fontFamily: 'RobotoMedium'
+        fontFamily: 'PoppinsMedium',
     },
     
 

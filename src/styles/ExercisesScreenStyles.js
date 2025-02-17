@@ -3,15 +3,20 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'grey',
-        textAlign: 'center',
-        alignItems: 'center',
-        padding: 30,
-        
+        backgroundColor: '#fff',
+        padding: 20,
     },
-    text: {
-        fontSize: 30,
+    title: {
+        fontSize: 24,
         fontWeight: 'bold',
-        fontFamily: 'RobotoMedium',
-    }
-})
+        marginBottom: 20,
+    },
+
+    inputButtonContainer: {
+        position: 'absolute',
+        bottom: 60,
+        left: 20,
+        right: 20,
+        alignItems: 'center',
+    },
+});

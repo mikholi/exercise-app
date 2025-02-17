@@ -9,7 +9,7 @@ export default StyleSheet.create({
         padding: 16,
     },
     header: {
-        fontFamily: 'RobotoMedium',
+        fontFamily: 'PoppinsMedium',
         fontSize: 20,
         marginBottom: 20,
         marginTop: 20,
@@ -17,5 +17,6 @@ export default StyleSheet.create({
     buttonContainer: {
         marginTop: 20,
         alignItems: 'center',
+        justifyContent: 'center',
     }
 });

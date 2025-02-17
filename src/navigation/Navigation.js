@@ -1,6 +1,5 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { View } from "react-native";
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import HomeScreen from "../screens/HomeScreen";
 import ExercisesScreen from "../screens/ExerciseScreen";
