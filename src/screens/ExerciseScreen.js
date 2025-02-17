@@ -1,28 +1,24 @@
-import React, { useContext } from 'react';
-import { View, Text, StyleSheet, FlatList} from 'react-native';
+import React, { useContext, useState } from 'react';
+import { View, Text, Button, StyleSheet,} from 'react-native';
 import { ExerciseContext } from '../components/ExerciseContext';
+import ExercisesModal from '../components/ExercisesModal';
 
 const ExerciseScreen = () => {
     const { exercises } = useContext(ExerciseContext);
+    const [modalVisible, setModalVisible] = useState(false);
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Exercise List</Text>
-            <FlatList
-                data={exercises}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({ item }) => (
-                    <View style={styles.item}>
-                        <Text>Date: {item.date}</Text>
-                        <Text>Sport: {item.sport}</Text>
-                        <Text>Distance: {item.distance} km</Text>
-                        <Text>Time: {item.time} minutes</Text>
-                    </View>
-                )}
-            />
+            <Text style={styles.title}>EXERCISE LIST</Text>
+            <Button title="Show Exercises" onPress={() => setModalVisible(true)} />
+                <ExercisesModal
+                    visible={modalVisible}
+                    onClose={() => setModalVisible(false)}
+                    exercises={exercises}
+                />
         </View>
-    );
-};
+    )
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -34,13 +30,6 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 20,
-    },
-    item: {
-        backgroundColor: '#21B4DE',
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16,
-        borderRadius: 10,
     },
 });
 
