@@ -14,8 +14,8 @@ export default StyleSheet.create({
         marginBottom: 20,
         marginTop: 20,
     },
-    buttonContainer: {
-        marginTop: 20,
+    inputButtonContainer: {
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
     }

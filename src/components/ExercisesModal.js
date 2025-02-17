@@ -40,8 +40,10 @@ const ExercisesModal = ({ visible, onClose, exercises }) => {
                             </View>
                         ))}
                     </ScrollView>
+                    <View style={styles.buttonContainer}>
                     <CustomButton 
                     title="Close" onPress={onClose} />
+                    </View>
                 </View>
             </View>
         </Modal>
@@ -83,6 +85,11 @@ const styles = StyleSheet.create({
     textContainer: {
         flex: 1,
     },
+
+    buttonContainer: {
+        alignItems: 'center',
+        justifyContent: 'center',
+    }
 });
 
 export default ExercisesModal;
