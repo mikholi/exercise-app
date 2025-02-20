@@ -5,7 +5,7 @@ export default StyleSheet.create({
         flex: 1, 
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#fff", 
+        backgroundColor: "#0097A7", 
         
       },
 
@@ -33,7 +33,7 @@ export default StyleSheet.create({
     },
     
     inputButton: {
-        backgroundColor: '#668BF2',
+        backgroundColor: '#0097A7',
         paddingVertical: 15,
         paddingHorizontal: 40,
         borderRadius: 10,

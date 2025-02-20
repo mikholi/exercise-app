@@ -1,17 +1,34 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'grey',
-        textAlign: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        padding: 30,
-        
+        backgroundColor: '#fff',
     },
-    text: {
-        fontSize: 30,
+    header: {
+        fontSize: 24,
         fontWeight: 'bold',
-        fontFamily: 'RobotoMedium',
-    }
-})
+        marginBottom: 16,
+        marginTop: 50,
+    },
+    iconContainer: {
+        marginTop: 16,
+        borderRadius: 50, 
+        overflow: 'hidden',
+        width: 100,
+        height: 100,
+        backgroundColor: 'white',
+        borderWidth: 1,
+        justifyContent: 'center',
+    },
+    backgroundImage: {
+        flex: 0.5,
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+});
+
+export default styles;

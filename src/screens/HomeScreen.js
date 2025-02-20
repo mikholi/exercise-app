@@ -12,7 +12,7 @@ export default function HomeScreen () {
     return (
         <View style={styles.container}>
             <Image source={require('../../assets/logo2.png')} style={styles.logo} resizeMode="contain" />
-            <Text style={styles.heading}>EXERCISE TRACKER</Text>
+            <Text style={styles.heading}>WORKOUT DIARY</Text>
             <View style={styles.inputButtonContainer}>
             <CustomButton
                 title="NEW EXERCISE"   
