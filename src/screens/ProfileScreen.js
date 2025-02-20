@@ -8,10 +8,9 @@ import { ExerciseContext } from "../components/ExerciseContext";
 export default function ProfileScreen () {
     const { exercises } = useContext(ExerciseContext);
 
-    // Calculate the total distance
+    
     const totalDistance = exercises.reduce((sum, exercise) => sum + exercise.distance, 0);
 
-    // Calculate the distance for each sport type
     const distanceBySport = exercises.reduce((acc, exercise) => {
         if (!acc[exercise.sport]) {
             acc[exercise.sport] = 0;
@@ -30,9 +29,10 @@ export default function ProfileScreen () {
             <View style={styles.statsContainer}>
                 <Text style={styles.statsText}>Total Distance: {totalDistance} km</Text>
                 {Object.keys(distanceBySport).map((sport) => (
-                    <Text key={sport} style={styles.statsText}>
-                        {sport} Distance: {distanceBySport[sport]} km
-                    </Text>
+                    <View key={sport} style={styles.sportsContainer}>
+                        <Text style={styles.sportText}>{sport}</Text>
+                        <Text style={styles.distanceText}>{distanceBySport[sport]} km</Text>
+                    </View>
                 ))}
             </View>
         </View>

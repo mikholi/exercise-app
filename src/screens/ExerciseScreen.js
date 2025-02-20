@@ -22,6 +22,7 @@ const ExerciseScreen = () => {
                     exercises={exercises}
                 />
                 <Text style={styles.textContainer}>Press the button to see all your stored exercises.</Text>
+                <Text style={styles.textContainer}>In Profile can see all sum of all your workouts.</Text>
         </View>
     )
 }
