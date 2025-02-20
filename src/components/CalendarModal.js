@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Modal, View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { Modal, View, Text, StyleSheet, Image, TouchableOpacity, Alert, } from "react-native";
 import { Calendar } from "react-native-calendars";
 import { useNavigation } from "@react-navigation/native";
 import InputSpinner from "react-native-input-spinner";
@@ -37,6 +37,7 @@ const CalendarModal = ({ visible, onClose }) => {
 
     const handleSave = () => {
         addExercise({ date: selected, sport, distance, time});
+        Alert.alert("Workout saved!");
         navigation.navigate("ExerciseScreen", { selectedDate: selected, sport, distance, time });
         onClose(); 
     };

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, Modal, Button, ScrollView, Image } from "react-native";
+import { View, Text, StyleSheet, Modal, ScrollView, Image } from "react-native";
 import CustomButton from '../components/Button';
 
 const ExercisesModal = ({ visible, onClose, exercises }) => {
@@ -13,8 +13,7 @@ const ExercisesModal = ({ visible, onClose, exercises }) => {
             case 'Cycling':
                 return require('../../assets/bicycle.png');
             default:
-                null;
-                
+                return null;
         }
     };
 
@@ -30,20 +29,25 @@ const ExercisesModal = ({ visible, onClose, exercises }) => {
                     <ScrollView contentContainerStyle={styles.scrollViewContent}>
                         {exercises.map((item, index) => (
                             <View key={index} style={styles.item}>
-                                <Image source={getIcon(item.sport)} style={styles.icon} />
+                                <View style={styles.iconContainer}>
+                                    <Image source={getIcon(item.sport)} style={styles.icon} />
+                                </View>
                                 <View style={styles.textContainer}>
                                     <Text>Date: {item.date}</Text>
                                     <Text>Sport: {item.sport}</Text>
                                     <Text>Distance: {item.distance}</Text>
-                                    <Text>Time: {item.minutes}</Text>
+                                    <Text>Time: {item.time}</Text>
                                 </View>
                             </View>
                         ))}
                     </ScrollView>
                     <View style={styles.buttonContainer}>
-                    <CustomButton 
-                    title="Close" onPress={onClose} />
+                        <CustomButton
+                            title="Close"
+                            onPress={onClose}
+                        />
                     </View>
+                    
                 </View>
             </View>
         </Modal>
@@ -71,27 +75,34 @@ const styles = StyleSheet.create({
     item: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#21B4DE',
+        backgroundColor: '#03A9F4',
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
         borderRadius: 10,
     },
+    iconContainer: {
+        width: 50,
+        height: 50,
+        borderRadius: 25,
+        overflow: 'hidden',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fff', 
+        marginRight: 10,
+    },
     icon: {
         width: 40,
         height: 40,
-        marginRight: 10,
     },
     textContainer: {
         flex: 1,
     },
-
     buttonContainer: {
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
+   
 });
 
 export default ExercisesModal;
-
-

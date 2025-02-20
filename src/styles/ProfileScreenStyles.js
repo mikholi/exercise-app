@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         marginBottom: 16,
-        marginTop: 50,
+        marginTop: 20,
     },
     iconContainer: {
         marginTop: 16,
@@ -24,10 +24,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     backgroundImage: {
-        flex: 0.5,
+        flex: 0.7,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
+    },
+
+    statsContainer: {
+        marginTop: 50,
+        alignItems: 'center',
+    },
+
+    statsText: {
+        fontSize: 18,
+        marginVertical: 5,
     },
 });
 

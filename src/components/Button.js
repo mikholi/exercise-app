@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from 'react-native-paper';
 import { StyleSheet } from 'react-native';
 
-const CustomButton = ({ title, onPress, buttonStyle, labelStyle, contentStyle }) => {
+const CustomButton = ({ title, onPress, buttonStyle, labelStyle, contentStyle, }) => {
     return (
         <Button
             mode='contained'
@@ -18,9 +18,10 @@ const CustomButton = ({ title, onPress, buttonStyle, labelStyle, contentStyle })
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#757575',
+        backgroundColor: '#03A9F4',
         width: 200,
         padding: 10,
+        borderWidth: 1,
     },
     label: {
         fontWeight: 'bold',

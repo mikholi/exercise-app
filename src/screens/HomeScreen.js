@@ -4,6 +4,7 @@ import styles from '../styles/HomeScreenStyles';
 import { useNavigation } from "@react-navigation/native";
 import CustomButton from "../components/Button";
 
+
 export default function HomeScreen () {
     
 
@@ -19,7 +20,6 @@ export default function HomeScreen () {
                 onPress={() => navigation.navigate("InputNewExercise")}
                 
             />
-
             </View>
         </View>
     );
