@@ -27,7 +27,7 @@ export default function ProfileScreen () {
                 <AntDesign name="user" size={100} color="black" />
             </View>
             <View style={styles.statsContainer}>
-                <Text style={styles.statsText}>Total Distance: {totalDistance} km</Text>
+                <Text style={styles.statsText}>TOTAL DISTANCE: {totalDistance} km</Text>
                 {Object.keys(distanceBySport).map((sport) => (
                     <View key={sport} style={styles.sportsContainer}>
                         <Text style={styles.sportText}>{sport}</Text>

@@ -9,6 +9,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { ExerciseProvider } from "../components/ExerciseContext";
 
 
+
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -69,5 +70,4 @@ export default function BottomNav() {
 }
 
 
-// Seuraavaksi calendarmodaliin lisätään valikko mihin voi syöttää kilometrimäärät. Yksinkertainen 
-//valikko mistä kun painaa voidaan näppäimillä laittaa määrä
+

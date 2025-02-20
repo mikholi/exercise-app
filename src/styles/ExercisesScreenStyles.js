@@ -3,15 +3,16 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#B3E5FC',
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
     backgroundImage: {
-        flex: 0.5, 
+        flex: 1, 
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
+        resizeMode: 'cover',
     },
 
     inputButtonContainer: {
@@ -22,6 +23,7 @@ export default StyleSheet.create({
         fontSize: 15,
         fontWeight: 'bold',
         marginTop: 20,
+        marginBottom: 5,
         
     },
 
